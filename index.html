@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+</head>
+<body style="background-color:black;display:flex;justify-content:center;align-items:center;height:100vh">
+  <div id="parent" >
+    <div>
+<img src="heart.jpg" height="250px" width="200px">
+    </div>
+    <h1 style="color:white">LOVE CALCULATOR</h1>
+    <form>
+      <label for="boy" style="color:white">boy</label>
+      <input type="text" id="boy" name="boy">
+      <br>
+            <label style="color:white">girl</label>
+      <input type="text" id="girl" name="girl">
+      <br>
+      <button type="submit" >calculate</button>
+    </form>
+    <h2 style="color:white">result</h2>
+  </div>
+  <div id="color">
+    <p style="color=green;">backgroundColor</p>
+    <button id="red">red</button>
+    <button id="green">green</button>
+        <button id="red">red</button>
+       <button id="blue">blue</button>
+       <button id="pink">pink</button>
+              <button id="black">black</button>
+       <button id="purple">purple</button>
+       <button id="yellow">yellow</button>
+      <button id="orange">orange</button>
+  </div>
+
+</body>
+<script>
+  const form=document.querySelector('form')
+  form.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const l1=document.getElementById("boy").value.length;
+    const l2=document.getElementById("girl").value.length;
+    const result=Math.pow(l1+l2,3)/101;
+document.querySelector('h2').textContent=`Result:${result}%`;
+  })
+  
+  const body=document.querySelector('body');
+   color.addEventListener('click',(e)=>{
+    const color=document.getElementById("color")
+    body.style.backgroundColor=e.target.id;
+  })
+</script>
+</html>
